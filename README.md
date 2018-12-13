@@ -23,11 +23,11 @@ The main function `ICP()` calculates the tonal attraction between two chords. Th
 - G-Major triad to C-Major Triad in MIDI = `ICP([59, 62, 67], [60, 64, 67])`
 
 #### Variables
-- pastchord, preschord : Past and Present chords/notes to be compared
-- roots=('A', 'B') : Which note in the chord is the root? If blank, will assume first note is the tonic root.
-- alpha : Voice Leading Variable
-- beta & gamma : Root Salience Variables
-- delta : consonance/dissonance strength
+- `pastchord, preschord` : Past and Present chords/notes to be compared
+- `roots=('A', 'B')` : Which note in the chord is the root? If blank, will assume first note is the tonic root.
+- `alpha` : Voice Leading Variable
+- `beta & gamma` : Root Salience Variables
+- `delta` : consonance/dissonance strength
 
 #### Returns:
 `ICP()` will always return an average attraction value (from 0-1) and a string indicating whether the comparison is consonant or dissonant. As such, the best way to call this function is to handle both these variables immediately.
@@ -49,4 +49,4 @@ Variables in the `ICP()` function are named similarly to those found in Woolhous
 ### Key-Finding Algorithm
 Also included is work on a new Key-Finding Algorithm based on the ICP model, first developed by Brandon Wild in 2015. This extension of the model applies it to a progression of chords, comparing each chord to possible scales it belongs to.
 
-You can find a working example of this by running `example.py`. Note that this is a work-in-progress...
+You can find a working example of this by running `KAexample.py`. Note that this is a work-in-progress...
